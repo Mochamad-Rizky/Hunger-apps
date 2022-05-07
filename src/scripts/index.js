@@ -3,6 +3,7 @@ import '../styles/main.scss';
 
 // components 
 import './Components/Navbar/Navbar';
+import './Components/Hero/Hero';
 
 const hamburgerButton = document.getElementById('hamburger');
 
