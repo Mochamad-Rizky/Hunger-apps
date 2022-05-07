@@ -9,7 +9,7 @@ class Navbar extends HTMLElement {
   render() {
     this.innerHTML = `
       <nav class="nav">
-        <img src="${logo}" alt="Hunger Apps logo" class="nav__logo">
+        <img src="${logo}" alt="Hunger Apps logo" class="nav__logo" width="60">
 
         <a href="#" id="hamburger" class="nav-hamburger__button">☰</a>
 
