@@ -1,3 +1,5 @@
+@import '../../../styles/variables';
+
 .nav {
   display: block;
   background-color: black;
@@ -12,7 +14,7 @@
   &-hamburger__button {
     font-size: 40px;
     padding: 0 5px;
-    color: yellow;
+    color: $font-color-yellow;
     text-decoration: none;
   }
 
@@ -28,7 +30,7 @@
     padding: 30px 0 20px;
     bottom: -240px;
     border-radius: 12px;
-    box-shadow: 1px 2px 30px 5px rgba(136, 230, 28, 0.5);
+    box-shadow: $box-shadow;
     display: none;
   }
 
@@ -48,7 +50,7 @@
     padding: 8px 0;
 
     &:hover {
-      color: yellow;
+      color: $font-color-yellow;
     }
   }
 
