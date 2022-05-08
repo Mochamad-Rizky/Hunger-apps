@@ -1,0 +1,51 @@
+@import '../../../../styles/variables';
+
+.restaurant-card-item {
+  display: block;
+  color: $font-color-white;
+  position: relative;
+  margin-bottom: 30px;
+  box-shadow: $box-shadow;
+  border-radius: 10px;
+  transition: 0.3s;
+
+  &:hover {
+    box-shadow: $box-shadow-hover;
+    transform: scale(1.02);
+  }
+
+  img {
+    border-radius: 10px 10px 0 0;
+    height: 250px;
+  }
+
+  &__description {
+    padding: 25px;
+
+    &-rating {
+      background-color: $pink;
+      padding: 7px;
+      border-radius: 50px;
+    }
+
+    p {
+      display: -webkit-box;
+      -webkit-line-clamp: 7;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    a {
+      padding: 10px 0;
+      display: inline-block;
+      margin: 10px 0;
+      color: $font-color-yellow;
+      font-size: 18px;
+      text-decoration: none;
+      &:hover {
+        color: $font-color-white;
+      }
+    }
+
+  }
+}
