@@ -4,7 +4,8 @@ import '../styles/main.scss';
 // components 
 import './Components/Navbar/Navbar';
 import './Components/Hero/Hero';
-import './Components/ListRestaurant/ListRestaurant'
+import './Components/ListRestaurant/ListRestaurant';
+import './Components/Promotion/Promotion';
 
 const hamburgerButton = document.getElementById('hamburger');
 
