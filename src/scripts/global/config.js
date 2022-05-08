@@ -6,3 +6,5 @@ const CONFIG = {
   },
   BASE_URL_BING: 'https://bing-news-search1.p.rapidapi.com',
 }
+
+export default CONFIG;
