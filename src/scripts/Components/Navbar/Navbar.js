@@ -21,7 +21,7 @@ class Navbar extends HTMLElement {
             <a href="#" class="nav__link">Favorite</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link" target="_blank">About US</a>
+            <a href="https://www.linkedin.com/in/mochamad-rizky/" class="nav__link" target="_blank">About US</a>
           </li>
         </ul>
       </nav>
