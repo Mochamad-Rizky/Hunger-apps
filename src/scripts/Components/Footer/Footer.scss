@@ -1,0 +1,20 @@
+@import '../../../styles/variables';
+
+footer-component {
+  display: block;
+  padding: 20px;
+
+  hr {
+    background-color: $font-color-yellow;
+    opacity: 1;
+    height: 4px;
+    width: 90%;
+    margin: auto;
+  }
+
+  p {
+    margin-top: 20px;
+    color: $font-color-white;
+    text-align: center;
+  }
+}
