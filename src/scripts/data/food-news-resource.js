@@ -6,8 +6,8 @@ class FoodNewsResource {
     const res = await fetch(API_ENDPOINT.FOOD_NEWS(newsCategory, count), {
       headers: CONFIG.HEADERS_BING,
     });
-
-    return res.data;
+    
+    return res.json();
   }
 }
 
