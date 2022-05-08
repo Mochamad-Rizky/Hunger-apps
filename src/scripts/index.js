@@ -1,5 +1,5 @@
+import 'regenerator-runtime';
 import '../styles/main.scss';
-
 
 // components 
 import './Components/Navbar/Navbar';
