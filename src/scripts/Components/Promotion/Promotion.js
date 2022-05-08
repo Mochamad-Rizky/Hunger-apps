@@ -23,7 +23,7 @@ class Promotion extends HTMLElement {
           from the admin and get a discount code that can be used in 
           all restaurants. Let's join the challenge.
         </p>
-        <a class="promotion__link" href="https://www.instagram.com">Post on Instagram NOW</a>
+        <a class="promotion__link" aria-label="Challenge post your food for get discount on instagram story" href="https://www.instagram.com">Post on Instagram NOW</a>
       </div>
     `;
   }
