@@ -11,7 +11,7 @@ class ListRestaurant extends HTMLElement {
 
     Data.restaurants.forEach((item) => {
       const restaurantCard = document.createElement('restaurant-card-item');
-      restaurantCard.className = 'restaurant-card-item';
+      restaurantCard.className = 'card-item';
       restaurantCard.restaurant = item;
       
       this.listElementContainer.appendChild(restaurantCard);
@@ -20,7 +20,7 @@ class ListRestaurant extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <section class="list-restaurant">
+      <section>
         <h2>List Restaurant</h2>
         <div class="list-restaurant__container">
         </div>
