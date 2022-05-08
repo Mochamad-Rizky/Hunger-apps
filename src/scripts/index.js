@@ -7,6 +7,7 @@ import './Components/Hero/Hero';
 import './Components/ListRestaurant/ListRestaurant';
 import './Components/Promotion/Promotion';
 import './Components/FoodNews/FoodNews';
+import './Components/Footer/Footer';
 
 const hamburgerButton = document.getElementById('hamburger');
 
