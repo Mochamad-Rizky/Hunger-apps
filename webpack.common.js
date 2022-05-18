@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require("copy-webpack-plugin");
-const WebpackPwaManifest = require("webpack-pwa-manifest");
+const CopyPlugin = require('copy-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/scripts/index.js'),
@@ -28,7 +28,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/templates/index.html'),
-      filename: "index.html",
+      filename: 'index.html',
     }),
     new CopyPlugin({
       patterns: [
@@ -37,7 +37,7 @@ module.exports = {
           to: path.resolve(__dirname, 'dist/'),
           globOptions: {
             ignore: [path.resolve(__dirname, 'src/public/images/heros/*')],
-          }
+          },
         },
       ],
     }),
