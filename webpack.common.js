@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
+const WebpackPwaManifest = require("webpack-pwa-manifest");
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/scripts/index.js'),
@@ -37,6 +38,34 @@ module.exports = {
           globOptions: {
             ignore: [path.resolve(__dirname, 'src/public/images/heros/*')],
           }
+        },
+      ],
+    }),
+    new WebpackPwaManifest({
+      name: 'Rubickone',
+      short_name: 'Rubickone',
+      description: 'Rubickone is a web application for search restaurants in Indonesia country',
+      start_url: '/index.html',
+      filename: 'manifest.json',
+      display: 'standalone',
+      background_color: '#ffffff',
+      orientation: 'portrait',
+      theme_color: '#2196f3',
+      publicPath: '/',
+      icons: [
+        {
+          src: path.resolve('src/public/images/logo/restaurant.png'),
+          type: 'image/png',
+          sizes: [96, 128, 192, 256, 384, 512],
+          destination: path.join('images/icons'),
+          purpose: 'maskable',
+        },
+        {
+          src: path.resolve('src/public/images/logo/restaurant.png'),
+          type: 'image/png',
+          size: '144x144',
+          destination: path.join('images/icons'),
+          purpose: 'any',
         },
       ],
     }),
