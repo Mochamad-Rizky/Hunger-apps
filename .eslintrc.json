@@ -12,5 +12,13 @@
         "sourceType": "module"
     },
     "rules": {
+        "linebreak-style": 0,
+        "global-require": 0,
+        "eslint linebreak-style": [0, "error", "windows"],
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+        "no-trailing-spaces": ["error", { "skipBlankLines": true }],
+        "no-underscore-dangle": 0,
+        "no-console": 0,
+        "no-restricted-globals": 0
     }
 }
