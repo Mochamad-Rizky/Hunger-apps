@@ -52,38 +52,4 @@
       color: $font-color-yellow;
     }
   }
-
-  @media screen and (min-width: 800px) {
-    &-hamburger__button {
-      display: none;
-    }
-
-    &__list {
-      width: 400px;
-      background-color: unset;
-      transform: unset;
-      position: unset;
-      z-index: 2;
-      display: flex;
-      justify-content: space-around;
-      box-shadow: unset;
-      padding: 0 20px;
-    }
-
-    &__item {
-      margin-bottom: 0;
-    }
-
-    &__list.active {
-      display: flex;
-    }
-
-    &__link {
-      color: white;
-    }
-  }
-
-  @media screen and (min-width: 1200px) {
-    max-width: 1320px;
-  }
 }

@@ -1,4 +1,5 @@
 import './Navbar.scss';
+import './Responsive.scss';
 
 class Navbar extends HTMLElement {
   connectedCallback() {

@@ -1,4 +1,5 @@
 import './Promotion.scss';
+import './Responsive.scss';
 
 class Promotion extends HTMLElement {
   connectedCallback() {
@@ -14,13 +15,13 @@ class Promotion extends HTMLElement {
         </h2>
         <p class="promotion__paragraph">
           First of all, you have to be able to finish food by providing
-           photos with the food you eat. And after that you can send the 
-           evidence by sending it on your insta story and tagging the 
+           photos with the food you eat. And after that you can send the
+           evidence by sending it on your insta story and tagging the
            official hunger apps instagram account.
         </p>
         <p class="promotion__paragraph">
-          After doing this, you just have to wait for confirmation 
-          from the admin and get a discount code that can be used in 
+          After doing this, you just have to wait for confirmation
+          from the admin and get a discount code that can be used in
           all restaurants. Let's join the challenge.
         </p>
         <a class="promotion__link" aria-label="Challenge post your food for get discount on instagram story" href="https://www.instagram.com">Post on Instagram NOW</a>

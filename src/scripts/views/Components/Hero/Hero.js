@@ -1,4 +1,5 @@
 import './Hero.scss';
+import './Responsive.scss';
 
 class Hero extends HTMLElement {
   connectedCallback() {

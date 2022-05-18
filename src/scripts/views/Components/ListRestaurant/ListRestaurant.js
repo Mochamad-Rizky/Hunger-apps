@@ -1,4 +1,5 @@
 import './ListRestaurant.scss';
+import './Responsive.scss';
 import './RestaurantCardItem/RestaurantCardItem';
 
 import Data from '../../../../DATA.json';
