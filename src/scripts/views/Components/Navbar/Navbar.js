@@ -9,16 +9,16 @@ class Navbar extends HTMLElement {
   render() {
     this.innerHTML = `
       <nav class="nav">
-        <img src="/images/logo/restaurant.png" alt="Hunger Apps logo" class="nav__logo" width="60">
+        <img src="/images/logo/restaurant.png" alt="Hunger Apps logo" class="nav__logo" width="60" height="60">
 
-        <a href="#" id="hamburger" class="nav-hamburger__button">☰</a>
+        <button id="hamburger" class="nav-hamburger__button">☰</button>
 
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="/" class="nav__link">Home</a>
+            <a href="#/list-restaurant" class="nav__link">Home</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Favorite</a>
+            <a href="#/favorite" class="nav__link">Favorite</a>
           </li>
           <li class="nav__item">
             <a href="https://www.linkedin.com/in/mochamad-rizky/" class="nav__link" target="_blank">About US</a>
