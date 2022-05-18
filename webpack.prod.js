@@ -35,7 +35,7 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\js$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: [
           {
