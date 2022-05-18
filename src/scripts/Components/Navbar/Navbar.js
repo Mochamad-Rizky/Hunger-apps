@@ -1,5 +1,4 @@
 import './Navbar.scss';
-import logo from '../../../public/images/logo/restaurant.png';
 
 class Navbar extends HTMLElement {
   connectedCallback() {
@@ -9,7 +8,7 @@ class Navbar extends HTMLElement {
   render() {
     this.innerHTML = `
       <nav class="nav">
-        <img src="${logo}" alt="Hunger Apps logo" class="nav__logo" width="60">
+        <img src="/images/logo/restaurant.png" alt="Hunger Apps logo" class="nav__logo" width="60">
 
         <a href="#" id="hamburger" class="nav-hamburger__button">☰</a>
 
