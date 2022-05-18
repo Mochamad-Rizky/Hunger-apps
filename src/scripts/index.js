@@ -1,17 +1,22 @@
 import 'regenerator-runtime';
+import App from './views/app';
+
 import '../styles/main.scss';
 
 // components
 import './views/Components/Navbar/Navbar';
-import './views/Components/Hero/Hero';
-import './views/Components/ListRestaurant/ListRestaurant';
-import './views/Components/Promotion/Promotion';
-import './views/Components/FoodNews/FoodNews';
 import './views/Components/Footer/Footer';
 
-const hamburgerButton = document.getElementById('hamburger');
+const app = new App({
+  button: document.querySelector('#hamburger'),
+  drawer: document.querySelector('.nav__list'),
+  content: document.querySelector('#main-content'),
+});
 
-hamburgerButton.addEventListener('click', () => {
-  const navList = document.querySelector('.nav__list');
-  navList.classList.toggle('active');
+window.addEventListener('DOMContentLoaded', () => {
+  app.renderPage();
+});
+
+window.addEventListener('hashchange', () => {
+  app.renderPage();
 });
