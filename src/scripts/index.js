@@ -1,13 +1,13 @@
 import 'regenerator-runtime';
 import '../styles/main.scss';
 
-// components 
-import './Components/Navbar/Navbar';
-import './Components/Hero/Hero';
-import './Components/ListRestaurant/ListRestaurant';
-import './Components/Promotion/Promotion';
-import './Components/FoodNews/FoodNews';
-import './Components/Footer/Footer';
+// components
+import './views/Components/Navbar/Navbar';
+import './views/Components/Hero/Hero';
+import './views/Components/ListRestaurant/ListRestaurant';
+import './views/Components/Promotion/Promotion';
+import './views/Components/FoodNews/FoodNews';
+import './views/Components/Footer/Footer';
 
 const hamburgerButton = document.getElementById('hamburger');
 

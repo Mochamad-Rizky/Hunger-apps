@@ -1,4 +1,4 @@
-@import '../../../styles/variables';
+@import '../../../../styles/variables';
 
 hero-component {
   display: block;
@@ -7,13 +7,13 @@ hero-component {
 .hero {
   display: block;
   margin: auto;
-  background-image: url('../../../public/images/heros/hero-image_3.jpg');
+  background-image: url('../../../../public/images/heros/hero-image_3.jpg');
   background-size: auto;
   background-position: center;
   width: 100%;
   height: 500px;
   padding: 20px;
-  
+
   &__content {
     margin-top: 50px;
     color: $font-color-white;
@@ -26,11 +26,11 @@ hero-component {
         font-size: 40px;
       }
     }
-    
+
     p {
       margin-top: 20px;
       line-height: 2;
-      font-size: 18px;  
+      font-size: 18px;
     }
   }
 

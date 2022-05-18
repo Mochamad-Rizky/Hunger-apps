@@ -1,7 +1,7 @@
 import './ListRestaurant.scss';
 import './RestaurantCardItem/RestaurantCardItem';
 
-import Data from '../../../DATA.json';
+import Data from '../../../../DATA.json';
 
 class ListRestaurant extends HTMLElement {
   connectedCallback() {

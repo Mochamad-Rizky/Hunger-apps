@@ -1,6 +1,6 @@
 import './FoodNewsItem/FoodNewsItem';
 import './FoodNews.scss';
-import FoodNewsResource from '../../data/food-news-resource';'../../data/food-news-resource';
+import FoodNewsResource from '../../../data/food-news-resource';'../../data/food-news-resource';
 
 class FoodNews extends HTMLElement {
   async connectedCallback() {
