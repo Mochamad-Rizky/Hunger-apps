@@ -1,0 +1,19 @@
+@import '../../../../styles/variables';
+
+.error-message {
+	background-color: rgb(60, 42, 42);
+	padding: 10px 5px;
+	border-radius: 20px;
+	&:hover {
+		cursor: pointer;
+		box-shadow: $box-shadow-hover;
+	}
+
+	p {
+		text-align: center;
+		margin: 100px 0;
+		font-size: 20px;
+		color: white;
+		text-transform: uppercase;
+	}
+}
