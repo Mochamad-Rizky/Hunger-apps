@@ -4,6 +4,8 @@ import '../Components/Promotion/Promotion';
 import '../Components/ListRestaurant/ListRestaurant';
 import '../Components/FoodNews/FoodNews';
 import '../Components/ListRestaurant/RestaurantCardItem/RestaurantCardItem';
+import loader from '../UI/Loading/loader';
+import error from '../UI/Error/error';
 
 const Home = {
   async render() {
@@ -21,15 +23,21 @@ const Home = {
     const restaurantContainer = document.querySelector('.list-restaurant__container');
     
     try {
+      restaurantContainer.innerHTML = loader();
+      restaurantContainer.style.display = 'block';
+      
       const data = await RestaurantSource.listRestaurant();
-      data.restaurants.forEach((restaurant) => {
+      restaurantContainer.innerHTML = '';
+      restaurantContainer.style.display = 'grid';
+      
+      data?.restaurants?.forEach((restaurant) => {
         const restaurantCardItem = document.createElement('restaurant-card-item');
         restaurantCardItem.className = 'card-item';
         restaurantCardItem.restaurant = restaurant;
         restaurantContainer.appendChild(restaurantCardItem);
       });
-    } catch (error) {
-      console.log(error);
+    } catch (errorMessage) {
+      restaurantContainer.innerHTML = error(errorMessage.message);
     }
   },
 };
