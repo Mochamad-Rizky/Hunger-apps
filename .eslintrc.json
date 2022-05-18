@@ -20,6 +20,8 @@
         "no-underscore-dangle": 0,
         "no-console": 0,
         "no-restricted-globals": 0,
-        "eol-last": "off"
+        "eol-last": "off",
+        "operator-linebreak": "off",
+        "object-curly-newline": "off"
     }
 }
