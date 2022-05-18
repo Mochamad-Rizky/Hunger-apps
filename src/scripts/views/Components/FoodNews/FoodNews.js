@@ -2,7 +2,7 @@ import FoodNewsResource from '../../../data/food-news-resource';
 
 import './FoodNewsItem/FoodNewsItem';
 import './FoodNews.scss';
-import './Responsive.scss'
+import './Responsive.scss';
 
 class FoodNews extends HTMLElement {
   async connectedCallback() {
@@ -25,11 +25,9 @@ class FoodNews extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <section>
-        <h2>Food News</h2>
-        <div class="list-food-news__container">
-        </div>
-      </section>
+      <h2>Food News</h2>
+      <div class="list-food-news__container">
+      </div>
     `;
   }
 }
