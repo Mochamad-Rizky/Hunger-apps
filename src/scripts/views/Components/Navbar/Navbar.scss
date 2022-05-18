@@ -15,7 +15,10 @@
     font-size: 40px;
     padding: 0 5px;
     color: $font-color-yellow;
-    text-decoration: none;
+    background-color: black;
+    outline: none;
+    border: none;
+    cursor: pointer;
   }
 
   &__list {
