@@ -1,0 +1,44 @@
+@import '../../../../styles/variables';
+
+.detail__overview-body-reviews__form {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+
+	&-item {
+		margin-bottom: 15px;
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		input, textarea {
+			padding: 10px;
+			border-radius: 12px;
+			font-family: 'Poppins', sans-serif;
+			box-shadow: $box-shadow;
+			border: none;
+
+		}
+
+		textarea {
+			width: 100%;
+			height: 200px;
+		}
+	}
+
+	button {
+		background-color: $font-color-yellow;
+		color: black;
+		padding: 15px 3px;
+		border: none;
+		width: 100px;
+		border-radius: 12px;
+		cursor: pointer;
+		margin-top: 15px;
+
+		&:hover {
+			opacity: 0.6;
+		}
+	}
+}
