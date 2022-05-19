@@ -18,17 +18,21 @@ const Detail = {
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const detailContainer = document.querySelector('detail-restaurant');
+    const likeButtonContainer = document.querySelector('#likeButtonContainer');
     
     try {
+      detailContainer.innerHTML = loader();
+      
       const data = await RestaurantSource.detailRestaurant(url.id);
       detailContainer.detailRestaurantData = data;
       
       await LikeButtonInitiator.init({
-        likeButtonContainer: document.querySelector('#likeButtonContainer'),
+        likeButtonContainer,
         favoriteRestaurant: FavRestaurantIdb,
         data,
       });
     } catch (errorMessage) {
+      likeButtonContainer.innerHTML = '';
       detailContainer.innerHTML = error(errorMessage.message);
     }
     
