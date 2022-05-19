@@ -22,6 +22,7 @@
         "no-restricted-globals": 0,
         "eol-last": "off",
         "operator-linebreak": "off",
-        "object-curly-newline": "off"
+        "object-curly-newline": "off",
+        "no-alert": "off"
     }
 }
