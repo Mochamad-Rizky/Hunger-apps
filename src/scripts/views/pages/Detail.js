@@ -3,12 +3,15 @@ import loader from '../UI/Loading/loader';
 import error from '../UI/Error/error';
 import postReview from '../../utils/post-review';
 import RestaurantSource from '../../data/RestraurantSource';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
+import FavRestaurantIdb from '../../data/favorite-restaurant-idb';
 import '../Components/DetailRestaurant/DetailRestaurant';
 
 const Detail = {
   async render() {
     return `
       <detail-restaurant class="detail"></detail-restaurant>
+      <div id="likeButtonContainer"></div>
     `;
   },
   
@@ -19,6 +22,12 @@ const Detail = {
     try {
       const data = await RestaurantSource.detailRestaurant(url.id);
       detailContainer.detailRestaurantData = data;
+      
+      await LikeButtonInitiator.init({
+        likeButtonContainer: document.querySelector('#likeButtonContainer'),
+        favoriteRestaurant: FavRestaurantIdb,
+        data,
+      });
     } catch (errorMessage) {
       detailContainer.innerHTML = error(errorMessage.message);
     }
