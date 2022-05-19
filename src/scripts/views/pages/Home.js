@@ -11,7 +11,7 @@ const Home = {
   async render() {
     return `
       <hero-component></hero-component>
-      <list-restaurant-component class="list-restaurant">
+      <list-restaurant-component class="list-restaurant" title="List Restaurant">
       
       </list-restaurant-component>
       <food-news-component class="list-food-news"></food-news-component>
