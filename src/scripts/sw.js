@@ -33,6 +33,10 @@ precacheAndRoute(
       url: 'https://use.fontawesome.com/b070c8f1df.js',
       revision: 1,
     },
+    {
+      url: 'https://use.fontawesome.com/b070c8f1df.css',
+      revision: 1,
+    }
   ],
   {
     ignoreURLParametersMatching: [/.*/],
@@ -43,6 +47,19 @@ registerRoute(
   /^https:\/\/restaurant-api\.dicoding\.dev\/(?:(list|detail))/,
   new StaleWhileRevalidate({
     cacheName: 'restaurant-api',
+    plugins: [
+      new ExpirationPlugin({
+        maxAgeSeconds: oneMonthStoreInCache,
+        maxEntries: 100,
+      }),
+    ],
+  }),
+);
+
+registerRoute(
+  /https:\/\/bing-news-search1.p.rapidapi.com\/news\/search/,
+  new StaleWhileRevalidate({
+    cacheName: 'new-bing-api',
     plugins: [
       new ExpirationPlugin({
         maxAgeSeconds: oneMonthStoreInCache,
@@ -84,7 +101,7 @@ registerRoute(
 );
 
 registerRoute(
-  /https:\/\/use.fontawesome.com\/b070c8f1df.js/,
+  /https:\/\/use.fontawesome.com\/b070c8f1df.css/,
   new CacheFirst({
     cacheName: 'fontawesome-fonts-stylesheets',
     plugins: [
