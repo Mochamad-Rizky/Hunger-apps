@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
+const { InjectManifest } = require('workbox-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/scripts/index.js'),
@@ -52,6 +53,7 @@ module.exports = {
       orientation: 'portrait',
       theme_color: '#2196f3',
       publicPath: '/',
+      crossorigin: 'use-credentials',
       icons: [
         {
           src: path.resolve('src/public/images/logo/restaurant.png'),
@@ -68,6 +70,11 @@ module.exports = {
           purpose: 'any',
         },
       ],
+    }),
+    new InjectManifest({
+      swSrc: './src/scripts/sw.js',
+      swDest: 'sw.js',
+      exclude: ['/c', '/j', /.*\.DS_Store/],
     }),
   ],
 };
