@@ -36,7 +36,7 @@ precacheAndRoute(
     {
       url: 'https://use.fontawesome.com/b070c8f1df.css',
       revision: 1,
-    }
+    },
   ],
   {
     ignoreURLParametersMatching: [/.*/],
