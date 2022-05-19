@@ -1,4 +1,4 @@
-import { openDB } from "idb";
+import { openDB } from 'idb';
 import CONFIG from '../global/config';
 
 const { DATABASE_NAME, DATABASE_VERSION, OBJECT_STORE_NAME } = CONFIG;
