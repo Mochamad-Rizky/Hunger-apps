@@ -37,8 +37,8 @@ const Detail = {
     }
     
     const postReviewContainer = document.querySelector('.detail__overview-body-reviews__form');
-    const nameInput = postReviewContainer.querySelector('input[name="name"]');
-    const reviewInput = postReviewContainer.querySelector('textarea[name="review"');
+    const nameInput = postReviewContainer.querySelector('.input-name__review');
+    const reviewInput = postReviewContainer.querySelector('.input-description__review');
     
     postReviewContainer.addEventListener('submit', (event) => {
       event.preventDefault();
