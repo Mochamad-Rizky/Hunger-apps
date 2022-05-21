@@ -15,10 +15,10 @@ class Navbar extends HTMLElement {
 
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="#/list-restaurant" class="nav__link">Home</a>
+            <a href="/#" class="nav__link">Home</a>
           </li>
           <li class="nav__item">
-            <a href="#/favorite" class="nav__link">Favorite</a>
+            <a href="/#/favorite" class="nav__link">Favorite</a>
           </li>
           <li class="nav__item">
             <a href="https://www.linkedin.com/in/mochamad-rizky/" class="nav__link" target="_blank">About US</a>
