@@ -3,16 +3,18 @@ import UrlParser from '../ruotes/url-parser';
 import routes from '../ruotes/routes';
 
 class App {
-  constructor({ button, drawer, content }) {
+  constructor({ button, drawer, content, skipLink }) {
     this._button = button;
     this._drawer = drawer;
     this._content = content;
+    this._skipLink = skipLink;
     
     this._initialAppShell();
   }
   
   _initialAppShell() {
     this._initialDrawer();
+    this._initialSkipLink();
   }
   
   _initialDrawer() {
@@ -20,6 +22,13 @@ class App {
       button: this._button,
       drawer: this._drawer,
       content: this._content,
+    });
+  }
+
+  _initialSkipLink() {
+    this._skipLink.addEventListener('click', () => {
+      this._content.tabIndex = 0;
+      this._content.focus();
     });
   }
   

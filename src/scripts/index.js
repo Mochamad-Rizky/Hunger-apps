@@ -12,6 +12,7 @@ const app = new App({
   button: document.querySelector('#hamburger'),
   drawer: document.querySelector('.nav__list'),
   content: document.querySelector('#main-content'),
+  skipLink: document.querySelector('.skip-to-content'),
 });
 
 window.addEventListener('DOMContentLoaded', () => {
