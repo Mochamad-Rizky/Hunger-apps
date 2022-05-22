@@ -4,7 +4,7 @@ import '../Components/Promotion/Promotion';
 import '../Components/ListRestaurant/ListRestaurant';
 import '../Components/FoodNews/FoodNews';
 import '../Components/ListRestaurant/RestaurantCardItem/RestaurantCardItem';
-import loader from '../UI/Loading/loader';
+import skeletonUI from '../UI/SkeletonUI/skeleton-UI';
 import error from '../UI/Error/error';
 
 const Home = {
@@ -23,12 +23,10 @@ const Home = {
     const restaurantContainer = document.querySelector('.list-restaurant__container');
     
     try {
-      restaurantContainer.innerHTML = loader();
-      restaurantContainer.style.display = 'block';
+      restaurantContainer.innerHTML = skeletonUI(6);
       
       const data = await RestaurantSource.listRestaurant();
       restaurantContainer.innerHTML = '';
-      restaurantContainer.style.display = 'grid';
       
       data?.restaurants?.forEach((restaurant) => {
         const restaurantCardItem = document.createElement('restaurant-card-item');

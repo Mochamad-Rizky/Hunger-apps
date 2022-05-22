@@ -1,5 +1,6 @@
 import FoodNewsResource from '../../../data/food-news-resource';
-import loader from '../../UI/Loading/loader';
+// import loader from '../../UI/Loading/loader';
+import skeletonUI from '../../UI/SkeletonUI/skeleton-UI';
 // eslint-disable-next-line import/named
 import error from '../../UI/Error/error';
 
@@ -13,12 +14,10 @@ class FoodNews extends HTMLElement {
     this.listElementContainer = this.querySelector('.list-food-news__container');
     
     try {
-      this.listElementContainer.innerHTML = loader();
-      this.listElementContainer.style.display = 'block';
+      this.listElementContainer.innerHTML = skeletonUI(3);
       
       this.getData = await FoodNewsResource.getFoodNews('food', 3);
       this.listElementContainer.innerHTML = '';
-      this.listElementContainer.style.display = 'grid';
   
       this.getData.value.forEach((item) => {
         const foodNewsCard = document.createElement('food-news-card-item');
