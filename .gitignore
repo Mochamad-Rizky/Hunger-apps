@@ -7,3 +7,5 @@ node_modules
 .firebase
 
 dist
+
+e2e/outputs
