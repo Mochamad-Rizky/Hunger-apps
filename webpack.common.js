@@ -3,12 +3,22 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const { InjectManifest } = require('workbox-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/scripts/index.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].bundle.js',
+    filename: 'output/[name].bundle.js',
+    assetModuleFilename: (pathData) => {
+      const filePath = path
+        .dirname(pathData.filename)
+        .split('/')
+        .slice(3)
+        .join('/');
+      
+      return `images/${filePath}/${path.basename(pathData.filename)}`;
+    },
   },
   module: {
     rules: [
@@ -30,6 +40,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/templates/index.html'),
       filename: 'index.html',
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true,
+      },
     }),
     new CopyPlugin({
       patterns: [
@@ -37,7 +55,10 @@ module.exports = {
           from: path.resolve(__dirname, 'src/public/'),
           to: path.resolve(__dirname, 'dist/'),
           globOptions: {
-            ignore: [path.resolve(__dirname, 'src/public/images/heros/*')],
+            ignore: [
+              path.resolve(__dirname, 'src/public/images/heros/*'),
+              path.resolve(__dirname, 'src/public/images/Universal/*'),
+            ],
           },
         },
       ],
@@ -75,6 +96,10 @@ module.exports = {
       swSrc: './src/scripts/sw.js',
       swDest: 'sw.js',
       exclude: ['/c', '/j', /.*\.DS_Store/],
+    }),
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      openAnalyzer: false,
     }),
   ],
 };
