@@ -84,6 +84,8 @@
 						background-color: $grey;
 						margin-top: 10px;
 						padding: 20px;
+						width: 100%;
+						overflow: hidden;
 
 						&:hover {
 							box-shadow: $box-shadow-hover;
@@ -92,6 +94,10 @@
 						h3 {
 							color: $font-color-yellow;
 							font-size: 16px;
+						}
+
+						p {
+							width: 100%;
 						}
 
 						date {
