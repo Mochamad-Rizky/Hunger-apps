@@ -23,6 +23,8 @@
         "eol-last": "off",
         "operator-linebreak": "off",
         "object-curly-newline": "off",
-        "no-alert": "off"
+        "no-alert": "off",
+        "consistent-return": "off",
+        "no-plusplus": "off"
     }
 }
