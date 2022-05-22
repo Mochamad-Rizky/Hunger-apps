@@ -3,6 +3,8 @@ import App from './views/app';
 import swRegister from './utils/sw-register';
 
 import '../styles/main.scss';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 // components
 import './views/Components/Navbar/Navbar';
@@ -15,11 +17,11 @@ const app = new App({
   skipLink: document.querySelector('.skip-to-content'),
 });
 
-window.addEventListener('DOMContentLoaded', () => {
-  app.renderPage();
-  swRegister();
+window.addEventListener('DOMContentLoaded', async () => {
+  await app.renderPage();
+  await swRegister();
 });
 
-window.addEventListener('hashchange', () => {
-  app.renderPage();
+window.addEventListener('hashchange', async () => {
+  await app.renderPage();
 });
