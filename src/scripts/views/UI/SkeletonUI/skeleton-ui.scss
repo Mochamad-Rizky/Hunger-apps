@@ -1,0 +1,21 @@
+.skeleton-card__item {
+	background-color: black;
+	animation: skeleton-ui-animation 4s infinite;
+
+	h3 {
+		margin: 30px 0;
+		color: yellow
+	}
+}
+
+@keyframes skeleton-ui-animation {
+	0% {
+		background-color: black;
+	}
+	50% {
+		background-color: #772727;
+	}
+	100% {
+		background-color: black;
+	}
+}
