@@ -1,6 +1,9 @@
 const { merge } = require('webpack-merge');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const CssMiniExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
+const ImageminMozjpeg = require('imagemin-mozjpeg');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const common = require('./webpack.common');
 
@@ -28,7 +31,9 @@ module.exports = merge(common, {
         },
       },
     },
+    minimize: true,
     minimizer: [
+      new TerserPlugin(),
       new CssMinimizerPlugin(),
     ],
   },
@@ -51,5 +56,17 @@ module.exports = merge(common, {
   plugins: [
     new CleanWebpackPlugin(),
     new CssMiniExtractPlugin(),
+    new ImageminWebpackPlugin({
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      plugins: [
+        ImageminMozjpeg({
+          quality: 40,
+          progressive: true,
+        }),
+      ],
+      pngquant: {
+        quality: '40-50',
+      },
+    }),
   ],
 });
