@@ -11,7 +11,7 @@ class Navbar extends HTMLElement {
       <nav class="nav">
         <img src="/images/logo/restaurant.png" alt="Hunger Apps logo" class="nav__logo" width="60" height="60">
 
-        <button id="hamburger" class="nav-hamburger__button">☰</button>
+        <button id="hamburger" class="nav-hamburger__button" aria-label="hamburger button open list navigation">☰</button>
 
         <ul class="nav__list">
           <li class="nav__item">
