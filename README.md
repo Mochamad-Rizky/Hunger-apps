@@ -1,6 +1,6 @@
 # Hunger Apps
 
-Hunger apps is a website that was built to be able to pass the front end web developer expert class. Where in this application using vanilla JS and without any CSS framework. Hunger apps is a website that was built to be able to pass the front end web developer expert class. Where in this application using vanilla JS and without any CSS framework. Then here i am use the mobile first approach for styling layout.
+Hunger apps is a website that was built to be able to pass the front end web developer expert class. Where in this application using vanilla JS and without any CSS framework. Then here i am use the mobile first approach for styling layout.
 
 ## Run Locally
 
